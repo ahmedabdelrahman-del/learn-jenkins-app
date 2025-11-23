@@ -19,6 +19,22 @@ pipeline {
                 '''
             }
         }
+        stage('Test'){
+
+            steps{
+                script{
+                    def exist = fileExists(index.html)
+                    if (exist){
+                        echo "file is fine"
+
+                    }else{
+                        echo "file is failed"
+                        exit 1
+                    }
+  
+                }
+            }
+        }
 
     }
 }
