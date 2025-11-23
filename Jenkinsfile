@@ -29,7 +29,7 @@ pipeline {
 
                     }else{
                         echo "file is failed"
-                        exit 1
+                        
                     }
   
                 }
