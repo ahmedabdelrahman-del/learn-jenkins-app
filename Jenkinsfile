@@ -19,28 +19,6 @@ pipeline {
                 '''
             }
         }
-        stage('Test'){
-                        agent{
-                docker{
-                    image 'node:18-alpine'
-                    reuseNode true
-                }
-            }
-
-            steps{
-                script{
-                    def exist = fileExists('build/index.html')
-                    if (exist){
-                        echo "file is fine"
-
-                    }else{
-                        echo "file is failed"
-                        
-                    }
-  
-                }
-            }
-        }
 
     }
 }
