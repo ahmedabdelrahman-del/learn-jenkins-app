@@ -23,7 +23,7 @@ pipeline {
 
             steps{
                 script{
-                    def exist = fileExists(index.html)
+                    def exist = fileExists(build/index.html)
                     if (exist){
                         echo "file is fine"
 
